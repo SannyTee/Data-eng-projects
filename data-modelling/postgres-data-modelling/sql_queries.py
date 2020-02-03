@@ -10,7 +10,7 @@ time_table_drop = "DROP TABLE IF EXISTS time"
 
 songplay_table_create = ("""
     CREATE TABLE IF NOT EXISTS songplays
-    (songplay_id INT,
+    (songplay_id SERIAL  PRIMARY KEY,
     start_time DATE REFERENCES time(start_time),
     user_id INT NOT NULL REFERENCES users(user_id),
     song_id VARCHAR REFERENCES songs(song_id),
@@ -24,20 +24,20 @@ songplay_table_create = ("""
 user_table_create = ("""
     CREATE TABLE IF NOT EXISTS users
     (user_id INT PRIMARY KEY,
-    first_name VARCHAR ,
-    last_name VARCHAR,
+    first_name VARCHAR NOT NULL,
+    last_name VARCHAR NOT NULL,
     gender VARCHAR,
-    level VARCHAR
+    level VARCHAR NOT NULL 
     )
 """)
 
 song_table_create = ("""
     CREATE TABLE IF NOT EXISTS songs
     (song_id VARCHAR PRIMARY KEY,
-    title VARCHAR,
-    duration FLOAT,
-    year INT,
-    artist_id VARCHAR 
+    title VARCHAR NOT NULL,
+    duration FLOAT NOT NULL,
+    year INT NOT NULL,
+    artist_id VARCHAR  NOT NULL
     )
 """)
 
@@ -53,27 +53,29 @@ artist_table_create = ("""
 time_table_create = ("""
     CREATE TABLE IF NOT EXISTS time
     (start_time date PRIMARY KEY,
-    hour int,
-    day int,
-    week int,
-    month int,
-    year int,
-    weekday VARCHAR
+    hour int NOT NULL,
+    day int NOT NULL,
+    week int NOT NULL,
+    month int NOT NULL,
+    year int NOT NULL,
+    weekday VARCHAR NOT NULL
     )
 """)
 
 # INSERT RECORDS
 songplay_table_insert = ("""
     INSERT INTO songplays
-    (songplay_id, start_time, user_id, song_id, artist_id, session_id, location, user_agent)
-    VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+    (start_time, user_id, song_id, artist_id, session_id, location, user_agent)
+    VALUES (%s, %s, %s, %s, %s, %s, %s)
+    ON CONFLICT (songplay_id) DO NOTHING
 """)
 
 user_table_insert = ("""
     INSERT INTO users
     (user_id, first_name, last_name, gender, level)
     VALUES (%s, %s, %s, %s, %s)
-    ON CONFLICT (user_id) DO NOTHING
+    ON CONFLICT (user_id)
+    DO UPDATE SET level = excluded.level
 """)
 
 song_table_insert = ("""
