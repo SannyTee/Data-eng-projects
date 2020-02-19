@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "fa33401cc458bf9e9a22a97eaa8b587bf94ebefa5e654c65d8a44f00c659b6f6"
+            "sha256": "8b5c0bf0e042cafc4c688036b50da0db7f2262da2127ecb1e54e725a5844c455"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,6 +16,53 @@
         ]
     },
     "default": {
+        "cassandra-driver": {
+            "hashes": [
+                "sha256:0eb6cf8421ecd6925030e115236072bd553730bce7c82b8889830b21159813e8",
+                "sha256:1ae6622d5c338eacac0ade1ef416fd01a16187be729d824ca89c41954e9c0548",
+                "sha256:2b3a9ef665872e89449cbd6e6dc723d0ed9be5a1c831236761e8771a38f1d213",
+                "sha256:3a1e3ca35ad13084048ce901954cdf18a584146d10be46539b85412c3d45d5ac",
+                "sha256:3b79cc2675ff6e2ec88b388379f5c69ed749b84a9b22d752905e5f1683cd4629",
+                "sha256:4d6cbe0d005a71a28e8d6251139367745c7d3dc1ac152822b1de95af219a0a0c",
+                "sha256:56505e9c8cab996c892f5d688234c0f87fd792d2387c545048ee3e5f2a48eaca",
+                "sha256:5a49a5a37b0768eb48eaf12c53c91b0653ace5d083af4346e6603fa28beb62a0",
+                "sha256:5c4aaedcda980f8fe33b12f08a2197f54dc4c48f61072aec490ef7aa8309eb3f",
+                "sha256:5c942123f4cb42a188ab9a95f0ca27cbc48c263cc8c061ecf9cd959c23efbb04",
+                "sha256:5d54fb30aa3ecaa943025bc98fed8fa4bd653a7efba9c7573f493085b7442c97",
+                "sha256:6648282da46bc18f2502249aa35535c12fc22e5d2d6e41bdc6809d9d845787f7",
+                "sha256:71d5f3e322feea3d8a8f32d593598b6f9790e3f7e28cadf3bce98af170984f5c",
+                "sha256:77f43afc6b360e0d31a537938fbd60bebc1aed710e186755ccb2e00f8b05e8d0",
+                "sha256:7b0cf5aa2bdd215179222b2f033bc39f19ae123bdaad6b16fc37b5b1ec3d5b28",
+                "sha256:a883979390e2f82f0fab37c8c1bf8cd0ad5a5cc2f5f8bd57f31718870366b083",
+                "sha256:b1c5e02b24090623f00febf3531f48aa0387f8c5cc1926075989266e70a894ac",
+                "sha256:d49c8cbbcae2c5dc3b695e31c0e993e3c9c00143d9ba464bbf0efb61b7bb48c6",
+                "sha256:d66d4918f85c01da85e0cc6e0c5ed51c3e488c0196d13c0a0abd4e3414b6fa18",
+                "sha256:d9af252db0a0dcd2fa0f27ff0862c8dbd8a4ea03d2e7dc7bcbe3bbae0a02eabf",
+                "sha256:daf280b6cade9fe2cb54145621b6001a765985709a735a7695ea7ea2de0ab751",
+                "sha256:ec5ee471348ec914d7c4f64584bd8bd7e1b33d3821917ff09054244d32918117",
+                "sha256:ee976a061a7f981c0b34f4564f6fc171a86de87a67c4057c4f04f2713202e157",
+                "sha256:f37b0710380063c5f42358a9534217f7a0fcd8a08985a43d4137fb954fcacb41",
+                "sha256:fdbb1a5a8c02e9e8af95713aafe448020b9c8d04e4ac69486ab2fa4894a6146a",
+                "sha256:feb638c3be9f71f36823cedb92f3fa55eb47ada0dabf528f6ad20020afb3e8f9",
+                "sha256:ff248431521f4bf522b3f600f3a3a88b622a0a7b64326a5115f343d0b18c028e",
+                "sha256:ff477931d4b5f1db16b4899bb0a7e46c78d72b8470bdd07e794cbe70dc188199"
+            ],
+            "index": "pypi",
+            "version": "==3.21.0"
+        },
+        "click": {
+            "hashes": [
+                "sha256:2335065e6395b9e67ca716de5f7526736bfa6ceead690adf616d925bdc622b13",
+                "sha256:5b94b49521f6456670fdb30cd82a4eca9412788a93fa6dd6df72c94d5a8ff2d7"
+            ],
+            "version": "==7.0"
+        },
+        "geomet": {
+            "hashes": [
+                "sha256:cef6c73cfc0c4ea3961e16a6979dce75ef0298f0023cbd482855134dcdf7c010"
+            ],
+            "version": "==0.1.2"
+        },
         "psycopg2": {
             "hashes": [
                 "sha256:4212ca404c4445dc5746c0d68db27d2cbfb87b523fe233dc84ecd24062e35677",
@@ -34,6 +81,13 @@
             ],
             "index": "pypi",
             "version": "==2.8.4"
+        },
+        "six": {
+            "hashes": [
+                "sha256:236bdbdce46e6e6a3d61a337c0f8b763ca1e8717c03b369e87a7ec7ce1319c0a",
+                "sha256:8f3cd2e254d8f793e7f3d6d9df77b92252b52637291d0f0da013c76ea2724b6c"
+            ],
+            "version": "==1.14.0"
         }
     },
     "develop": {}
