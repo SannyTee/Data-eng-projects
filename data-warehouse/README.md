@@ -1,6 +1,6 @@
-#Project Data Warehouse
+# Project Data Warehouse
 
-##Project overview
+## Project overview
 Sparkify is a music streaming startup with a growing user base and song database. Sparkify want to move their processes and data onto the cloud.
 
 Users activities and songs metadata data resides in json files in S3. 
@@ -9,7 +9,7 @@ stages them in Redshift, and transforms data into a set of dimensional and fact 
 to continue finding insights in what songs their users are listening to.
 
 
-##How to run
+## How to run
 * Run `pipenv install` to create a virtual environment and install required dependencies.
 * create a `dwh.cfg` file in the project `data-warehouse` directory with the following configuration.  
 ```
@@ -46,23 +46,23 @@ SECRET_ACCESS_KEY=
 * To tear down the setup, run `python redshift_setup.py --destroy destroy`.  
 
 ## Database Schema
-###staging tables  
+### staging tables  
 * staging_events  
-![staging_events schema](uml-diagrams/staging_events.png)
+![staging_events schema](uml-diagrams/staging_events.png)  
 * staging_songs  
-![staging_songs schema](uml-diagrams/staging_songs.png)
+![staging_songs schema](uml-diagrams/staging_songs.png)  
 ### Fact tables
 * songplays - records in event data associated with song plays i.e. records with page NextSong  
-![songplays schema](uml-diagrams/songplays.png)
+![songplays schema](uml-diagrams/songplays.png)  
 ### Dimension tables
 * users - users of the app  
-![users schema](uml-diagrams/users.png)
+![users schema](uml-diagrams/users.png)  
 * artists - artists of songs in app database  
-![artists schema](uml-diagrams/artists.png)
-* songs - songs in the app database
-![songs schema](uml-diagrams/songs.png)
-* time - timestamps of records in songplays broken down into units
-![time schema](uml-diagrams/time.png)
+![artists schema](uml-diagrams/artists.png)  
+* songs - songs in the app database  
+![songs schema](uml-diagrams/songs.png)  
+* time - timestamps of records in songplays broken down into units  
+![time schema](uml-diagrams/time.png)  
 
 
 
