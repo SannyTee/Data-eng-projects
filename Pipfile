@@ -6,8 +6,11 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-psycopg2 = "*"
 cassandra-driver = "*"
+ipython-sql = "*"
+pandas = "*"
+boto3 = "*"
+psycopg2 = "*"
 
 [requires]
 python_version = "3.7"
